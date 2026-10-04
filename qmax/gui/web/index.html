@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>qmax</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <nav class="tabs" role="tablist">
+      <button type="button" role="tab" data-mode="live" id="tab-live">即時</button>
+      <button type="button" role="tab" data-mode="replay" id="tab-replay">回放</button>
+    </nav>
+    <div class="round" id="round"></div>
+    <form class="listen" id="listen">
+      <span class="status" id="status"></span>
+      <label class="addr">位址 <input id="host" size="12" autocomplete="off"></label>
+      <label class="addr">port <input id="port" size="5" inputmode="numeric" autocomplete="off"></label>
+      <button type="submit" id="toggle"></button>
+    </form>
+  </header>
+
+  <section class="replay-bar" id="replay-bar" hidden>
+    <div class="replay-row">
+      <select id="replay-file" aria-label="回放檔案"></select>
+      <button type="button" id="replay-browse">其他檔案…</button>
+      <div class="round-menu" id="round-menu">
+        <button type="button" id="round-button" aria-haspopup="listbox" aria-expanded="false" disabled>選擇局</button>
+        <ul class="round-list" id="round-list" role="listbox" hidden></ul>
+        <div class="round-tip" id="round-tip" hidden></div>
+      </div>
+      <span class="replay-pos" id="replay-pos"></span>
+    </div>
+    <div class="replay-row transport">
+      <button type="button" id="big-prev" title="上一大步：回到這家上一次摸牌（Shift+←）">⏮ 上一大步</button>
+      <button type="button" id="prev" title="上一步（←）">◀ 上一步</button>
+      <button type="button" id="play" class="play" title="播放／暫停（空白鍵）">▶ 播放</button>
+      <label class="interval">每 <select id="interval" aria-label="播放間隔">
+        <option value="500">0.5</option><option value="1000" selected>1</option>
+        <option value="2000">2</option><option value="3000">3</option>
+      </select> 秒</label>
+      <button type="button" id="next" title="下一步（→）">下一步 ▶</button>
+      <button type="button" id="big-next" title="下一大步：這家下一次摸牌（Shift+→）">下一大步 ⏭</button>
+      <input type="range" id="replay-slider" min="0" max="0" value="0" aria-label="跳到第幾步">
+    </div>
+  </section>
+
+  <main>
+    <section class="opponents" id="opponents"></section>
+    <section class="mine" id="mine"></section>
+  </main>
+
+  <footer class="log" id="log">
+    <button class="log-toggle" id="log-toggle" type="button" aria-expanded="false"></button>
+    <ol class="log-lines" id="log-lines"></ol>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="300"
+    height="400"
+    viewBox="0 0 300 400">
+
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE88A"/>
+      <stop offset="45%" stop-color="#D9A52B"/>
+      <stop offset="100%" stop-color="#A66D12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 將整個皇冠群組垂直平移至正中央 (X:150, Y:200) -->
+  <g transform="translate(0, 61.5)">
+
+    <!-- 皇冠圖案主體與底座 -->
+    <g
+        fill="url(#gold)"
+        stroke="#6D4109"
+        stroke-width="5"
+        stroke-linejoin="round">
+
+      <!-- 皇冠主體 -->
+      <path
+          d="
+            M 82,178
+            L 66,112
+            L 112,143
+            L 150,88
+            L 188,143
+            L 234,112
+            L 218,178
+            Z
+          "/>
+
+      <!-- 皇冠底座 -->
+      <path
+          d="
+            M 78,178
+            L 222,178
+            L 214,205
+            L 86,205
+            Z
+          "/>
+
+    </g>
+
+    <!-- 皇冠上的三顆寶石 -->
+    <circle
+        cx="65"
+        cy="110"
+        r="7"
+        fill="#A71926"
+        stroke="#FFE88A"
+        stroke-width="3"/>
+
+    <circle
+        cx="150"
+        cy="80"
+        r="8"
+        fill="#A71926"
+        stroke="#FFE88A"
+        stroke-width="3"/>
+
+    <circle
+        cx="235"
+        cy="110"
+        r="7"
+        fill="#A71926"
+        stroke="#FFE88A"
+        stroke-width="3"/>
+
+  </g>
+
+</svg>

@@ -1,0 +1,23 @@
+# 虛擬環境與快取
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# IDE 與編輯器設定檔
+.idea/
+.vscode/
+docs/
+
+# 專案產生的資料夾與日誌
+records/
+logs/
+
+# 專案特定設定檔與資源
+config/settings.yaml
+qmax/platforms/majsoul/liqi.desc
+analyzer/akochan/akochan/
+
+# 壓縮檔與打包檔
+*.zip
+*.tar.gz

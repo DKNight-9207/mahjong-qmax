@@ -1,0 +1,7 @@
+mitmproxy>=10
+protobuf==3.20.1
+requests
+ruamel.yaml
+loguru
+rich
+pywebview
